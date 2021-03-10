@@ -8,4 +8,8 @@ router.get('/exercise', (req, res) => {
     res.sendFile(getPath('exercise'));
 });
 
+router.get('/stats', (req, res) => {
+    res.sendFile(getPath('stats'));
+});
+
 module.exports = router;

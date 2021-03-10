@@ -19,21 +19,23 @@ const ExerciseSchema = new Schema({
         min: [1, 'Minimum duration is 1 minutes.']
     },
 
+    distance: {
+        type: Number,
+        min: [0, 'Minimum distance is 0 miles.']
+    },
+
     weight: {
         type: Number,
-        required: true,
         min: [1, 'Minimum weight is 1 lbs.']
     },
 
     reps: {
         type: Number,
-        required: true,
         min: [1, 'Minimum number of repititions is 1.']
     },
 
     sets: {
         type: Number,
-        required: true,
         min: [1, 'Minimum number of sets is 1.']
     }
 });

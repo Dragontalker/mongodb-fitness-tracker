@@ -44,6 +44,12 @@ const WorkoutSchema = new Schema({
         defualt: Date.now
     },
     
+    totalDuration: {
+        type: Number,
+        default: 0,
+        min: [0, 'Minimum total duration is 0 minutes.']
+    },
+
     exercises: [ExerciseSchema]
 });
 

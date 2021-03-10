@@ -1,13 +1,16 @@
+// initiate the router
 const express = require('express');
 const router = express.Router();
 
-
+// connect to MongoDB
 const mongoose = require("mongoose");
-const db = require('../models');
 mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
+
+// load the data model schema
+const db = require('../models');
 
 
 router.get('/', (req, res) => {

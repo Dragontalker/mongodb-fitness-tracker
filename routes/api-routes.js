@@ -23,4 +23,13 @@ router.get('/', (req, res) => {
         });
 });
 
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    const data = req.body;
+    const duration = data.duration;
+    console.log(id);
+    console.log(data);
+    console.log(duration);
+});
+
 module.exports = router;

@@ -22,6 +22,11 @@ router.post('/', async (req, res) => {
     await db.Workout.create({});
 });
 
+router.get('/deleteAll', async (req, res) => {
+    await db.Workout.deleteMany({'totalDuration': 0});
+    res.redirect('/');
+});
+
 router.put('/:id', (req, res) => {
     const id = req.params.id;
     const data = req.body;

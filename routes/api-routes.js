@@ -1,10 +1,9 @@
 const express = require('express');
-const mongoose = require("mongoose");
-
 const router = express.Router();
 
-const db = require('../models');
 
+const mongoose = require("mongoose");
+const db = require('../models');
 mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false

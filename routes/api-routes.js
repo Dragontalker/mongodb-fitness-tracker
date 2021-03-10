@@ -13,14 +13,13 @@ mongoose.connect("mongodb://localhost/workout", {
 const db = require('../models');
 
 
-router.get('/', (req, res) => {
-    db.Workout.find({})
-        .then(dbWorkout => {
-            res.json(dbWorkout);
-        })
-        .catch(err => {
-            res.json(err);
-        });
+router.get('/', async (req, res) => {
+    const result = await db.Workout.find({})
+    res.json(result);
+});
+
+router.post('/', async (req, res) => {
+    await db.Workout.create({ exercises: [req.body] })
 });
 
 router.put('/:id', (req, res) => {

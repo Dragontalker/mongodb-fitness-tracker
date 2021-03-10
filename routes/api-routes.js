@@ -19,8 +19,10 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    console.log(req.body);
-    await db.Workout.create({ exercises: [req.body] })
+    await db.Workout.create({ 
+        day: new Date(),
+        exercises: [{}]
+    });
 });
 
 router.put('/:id', (req, res) => {

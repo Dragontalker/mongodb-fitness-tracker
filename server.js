@@ -6,16 +6,16 @@ const app = express();
 
 // connect to MongoDB
 
+const mongoParams = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+};
 
-mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/workout',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
-    }
-);
+
+
+
 app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -27,6 +27,9 @@ app.use('/api/workouts', require('./routes/api-routes'));
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT} in your browser.`);
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', mongoParams)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT} in your browser.`);
+    });
+  });

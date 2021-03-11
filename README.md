@@ -1,17 +1,17 @@
-# Workout Tracker
+# __Workout Tracker__
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Deployed at Heroku
+## __Deployed at Heroku__
 https://dragontalker-fitness-tracker.herokuapp.com/
 
 ---
 
-## Screenshot
+## __Screenshot__
 ![workout tracker screenshot](./Assets/screenshots.png)
 
 ---
 
-## Table of Contents
+## __Table of Contents__
 * [Description](#Description)
 * [Installation](#Installation)
 * [Usage](#Usage)
@@ -20,39 +20,45 @@ https://dragontalker-fitness-tracker.herokuapp.com/
 
 ---
 
-### Desription
+### __Desription__
 
 This project builds a workout tracker with Express.js and MongoDB. User can start a workout plan and each plan can track multiple exercises. This application tracks two type of exercises: resistance and cardio. For resistance, the application tracks weight, reps, sets. For cardio exercises, it tracks ditances. After all, the duration of every exercises will be tracked as well. User can see the summary for their current workout plan at the main mage. If user wants more detailed data, he/she can view dashboard for detailed graphs and distributions of exercises performed over the last 7 workout plans.
 
 ---
 
-### User Story
+### __User Story__
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+As a user, 
+* I want to be able to view create and track daily workouts. 
+* I want to be able to log multiple exercises in a workout on a given day. 
+* I should also be able to track the name, type, weight, sets, reps, and duration of exercise. 
+* If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
 ---
 
-### Business Context
+### __Business Context__
 
 A consumer will reach their fitness goals more quickly when they track their workout progress.
 
 ---
 
-### Acceptance Criteria
+### __Acceptance Criteria__
 
 When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
 
 The user should be able to:
 
-  * Add exercises to the most recent workout plan.
+* Add exercises to the most recent workout plan.
 
-  * Add new exercises to a new workout plan.
+* Add new exercises to a new workout plan.
 
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
+* View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
 
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
+* View the total duration of each workout from the past seven workouts on the `stats` page.
 
-### Installation
+---
+
+### __Installation__
 To use this application locally, you need MongoDB community server installed. Type this command in command-line to check:
 ```bash
 mongo --version

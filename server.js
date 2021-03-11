@@ -4,7 +4,40 @@ const logger = require('morgan');
 const path = require('path');
 
 const app = express();
-const Workout = require('./models/workout');
+const Schema = mongoose.Schema;
+
+const WorkoutSchema = new Schema({
+  day: {
+    type: Date,
+    default: Date.now
+  },
+
+  totalDuration: {
+    type: Number,
+    default: 0
+  },
+
+  exercises: [
+    {
+      type: {
+        type: String,
+        enum: ['resistance', 'cardio']
+      },
+
+      name: {
+        type: String,
+        trim: true
+      },
+
+      duration: Number,
+      weight: Number,
+      reps: Number,
+      sets: Number
+    }
+  ]
+});
+
+const Workout = mongoose.model('workout', WorkoutSchema);
 
 app.use(logger('dev'));
 

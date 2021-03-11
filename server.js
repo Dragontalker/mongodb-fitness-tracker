@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const logger = require('morgan');
+const path = require('path');
 
 const app = express();
 
@@ -17,8 +18,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use('/', require('./routes/html-routes'));
-app.use('/api/workouts', require('./routes/api-routes'));
+app.get('/exercise', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/exercise.html'));
+});
+
+app.get('/stats', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/stats.html'));
+});
 
 // app.get('/api/workout', (req, res) => {
 //   res.send('Hello world!');

@@ -26,8 +26,6 @@ function populateChart(data) {
   let pounds = calculateTotalWeight(data);
   let [ workouts, duration ] = getPieData(data);
   let [ resistance, pound ] = getDonutData(data);
-  console.log(resistance);
-  console.log(pound);
   const colors = generatePalette();
 
   let line = document.querySelector('#canvas').getContext('2d');

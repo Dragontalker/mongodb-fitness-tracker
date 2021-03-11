@@ -139,7 +139,7 @@ function populateChart(data) {
       labels: workouts,
       datasets: [
         {
-          label: 'Exercises Performed',
+          label: 'Duration Distribution by Exercise',
           backgroundColor: colors,
           data: duration,
         },
@@ -148,7 +148,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: 'Exercises Performed',
+        text: 'Duration Distribution by Exercise',
       },
     },
   });
@@ -159,7 +159,7 @@ function populateChart(data) {
       labels: resistance,
       datasets: [
         {
-          label: 'Exercises Performed',
+          label: 'Pounds Distribution by Exercise',
           backgroundColor: colors,
           data: pound,
         },
@@ -168,7 +168,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: 'Exercises Performed',
+        text: 'Pounds Distribution by Exercise',
       },
     },
   });

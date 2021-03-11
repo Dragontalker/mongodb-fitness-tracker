@@ -6,6 +6,29 @@ const path = require('path');
 const app = express();
 const Schema = mongoose.Schema;
 
+const WorkoutSchema = new Schema({
+  day: {
+    type: Date,
+    default: Date.now
+  },
+
+  totalDuration: {
+    type: Number,
+    default: 0
+  },
+
+  exercises: [
+    {
+      type: String,
+      name: String,
+      duration: Number,
+      weight: Number,
+      reps: Number,
+      sets: Number
+    }
+  ]
+});
+
 app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));

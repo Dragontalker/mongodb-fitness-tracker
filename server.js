@@ -29,6 +29,8 @@ const WorkoutSchema = new Schema({
   ]
 });
 
+const Workout = mongoose.model('workout', WorkoutSchema);
+
 app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));

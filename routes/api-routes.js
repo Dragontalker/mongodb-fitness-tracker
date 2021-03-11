@@ -7,17 +7,17 @@ const router = express.Router();
 const db = require('../models');
 
 // connect to MongoDB
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/workout',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
-    }
-);
+// mongoose.connect(
+//     process.env.MONGODB_URI || 'mongodb://localhost/workout',
+//     {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//       useCreateIndex: true,
+//       useFindAndModify: false
+//     }
+// );
 
 
 router.get('/', async (req, res) => {

@@ -7,7 +7,6 @@ const router = express.Router();
 const db = require('../models');
 
 // connect to MongoDB
-const mongoose = require("mongoose");
 
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/workout',

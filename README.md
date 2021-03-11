@@ -4,8 +4,12 @@
 ## Deployed at Heroku
 https://dragontalker-fitness-tracker.herokuapp.com/
 
+---
+
 ## Screenshot
 ![workout tracker screenshot](./Assets/screenshots.png)
+
+---
 
 ## Table of Contents
 * [Description](#Description)
@@ -14,7 +18,13 @@ https://dragontalker-fitness-tracker.herokuapp.com/
 * [Contact](#Contact)
 * [License](#License)
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+---
+
+### Desription
+
+This project builds a workout tracker with Express.js and MongoDB. User can start a workout plan and each plan can track multiple exercises. This application tracks two type of exercises: resistance and cardio. For resistance, the application tracks weight, reps, sets. For cardio exercises, it tracks ditances. After all, the duration of every exercises will be tracked as well. User can see the summary for their current workout plan at the main mage. If user wants more detailed data, he/she can view dashboard for detailed graphs and distributions of exercises performed over the last 7 workout plans.
+
+---
 
 ## User Story
 

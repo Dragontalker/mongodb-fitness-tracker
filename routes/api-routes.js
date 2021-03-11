@@ -36,7 +36,7 @@ router.put('/:id', async (req, res) => {
     console.log(id);
     console.log(data);
     console.log(duration);
-    await db.Workout.findOneAndUpdate(
+    const workout = await db.Workout.findOneAndUpdate(
         { _id: id },
         { 
             $push: { exercises: data },
@@ -44,6 +44,8 @@ router.put('/:id', async (req, res) => {
         }, 
         {new: true}
     );
+    const result = await workout.save();
+    res.json(result);
 });
 
 module.exports = router;

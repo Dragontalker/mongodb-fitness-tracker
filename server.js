@@ -58,6 +58,14 @@ app.get('/api/workouts', async (req, res) => {
   res.json(result);
 });
 
+app.get('/api/workouts/range', async (req, res) => {
+  await Workout.deleteMany({'totalDuration': 0}); 
+  await Workout.deleteMany({'exercises': {$elemMatch: {'duration': 0}}});
+  const result = await Workout.find({}).sort({day: -1}).limit(7);
+  const reverse = result.reverse();
+  res.json(reverse);
+})
+
 const mongoParams = {
   useNewUrlParser: true,
   useUnifiedTopology: true,

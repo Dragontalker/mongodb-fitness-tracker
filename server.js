@@ -4,17 +4,12 @@ const logger = require('morgan');
 
 const app = express();
 
-// connect to MongoDB
-
 const mongoParams = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
 };
-
-
-
 
 app.use(logger('dev'));
 

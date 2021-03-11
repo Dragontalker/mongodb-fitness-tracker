@@ -1,9 +1,11 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const logger = require('morgan');
 
 const app = express();
 
 // connect to MongoDB
-const mongoose = require('mongoose');
+
 
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/workout',
@@ -14,6 +16,7 @@ mongoose.connect(
       useFindAndModify: false
     }
 );
+app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

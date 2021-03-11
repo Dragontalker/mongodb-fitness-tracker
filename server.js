@@ -5,13 +5,6 @@ const path = require('path');
 
 const app = express();
 
-const mongoParams = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-};
-
 app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -26,9 +19,16 @@ app.get('/stats', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/stats.html'));
 });
 
-// app.get('/api/workout', (req, res) => {
-//   res.send('Hello world!');
-// });
+app.get('/api/workouts', (req, res) => {
+  res.json({msg: 'Hello world!'});
+});
+
+const mongoParams = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+};
 
 const PORT = process.env.PORT || 3000;
 

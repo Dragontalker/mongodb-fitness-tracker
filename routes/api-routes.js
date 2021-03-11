@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    await db.Workout.create({});
+    const result = await db.Workout.create({});
+    res.json(result);
 });
 
 router.get('/range', async (req, res) => {

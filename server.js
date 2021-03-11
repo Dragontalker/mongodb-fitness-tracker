@@ -20,7 +20,6 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.use('/', require('./routes/html-routes'));
-// app.use('/api/workouts', require('./routes/api-routes'));
 
 
 const PORT = process.env.PORT || 3000;

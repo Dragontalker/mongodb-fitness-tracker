@@ -34,9 +34,6 @@ router.put('/:id', async (req, res) => {
     const id = req.params.id;
     const data = req.body;
     const duration = data.duration;
-    console.log(id);
-    console.log(data);
-    console.log(duration);
     const workout = await db.Workout.findOneAndUpdate(
         { _id: id },
         { 

@@ -199,12 +199,14 @@ function getPieData(data) {
   data.forEach((workout) => {
     workout.exercises.forEach((exercise) => {
       let target = exercise.name;
-      if (workouts.includes(target)) {
-        let index = workouts.indexOf(target);
-        duration[index] += exercise.duration;
-      } else {
-        workouts.push(target);
-        duration.push(exercise.duration);
+      if (target) {
+        if (workouts.includes(target)) {
+          let index = workouts.indexOf(target);
+          duration[index] += exercise.duration;
+        } else {
+          workouts.push(target);
+          duration.push(exercise.duration);
+        };
       };
     });
   });
@@ -221,14 +223,16 @@ function getDonutData(data) {
     workout.exercises.forEach((exercise) => {
       if (exercise.type === 'resistance') {
         let target = exercise.name;
-        if (resistance.includes(target)) {
-          let index = resistance.indexOf(target);
-          pound[index] += exercise.weight;
-        } else {
-          resistance.push(target);
-          pound.push(exercise.weight);
+        if (target) {
+          if (resistance.includes(target)) {
+            let index = resistance.indexOf(target);
+            pound[index] += exercise.weight;
+          } else {
+            resistance.push(target);
+            pound.push(exercise.weight);
+          };
         };
-      }
+      };
     })
   });  
 

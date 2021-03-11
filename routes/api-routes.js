@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     // const result = await db.Workout.find({})
     // res.json(result);
-    res.send('Hello world!');
+    res.json({msg: 'Hello world!'});
 });
 
 

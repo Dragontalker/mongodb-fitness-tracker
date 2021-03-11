@@ -22,9 +22,11 @@ router.post('/', async (req, res) => {
     await db.Workout.create({});
 });
 
-router.get('/deleteAll', async (req, res) => {
+router.get('/range', async (req, res) => {
     await db.Workout.deleteMany({'totalDuration': 0});
-    res.redirect('/');
+    const result = await db.Workout.find({}).sort({day: -1}).limit(7);
+    const reverse = result.reverse();
+    res.json(reverse);
 });
 
 router.put('/:id', (req, res) => {

@@ -71,6 +71,22 @@ app.post('/api/workouts', async (req, res) => {
   res.json(result);
 });
 
+app.put('/api/workouts/:id', async (req, res) => {
+  const id = req.params.id;
+  const data = req.body;
+  const duration = data.duration;
+  const workout = await Workout.findOneAndUpdate(
+    { _id: id },
+    {
+      $push: { exercises: data },
+      $inc: { totalDuration: duration}
+    },
+    {new: true}
+  );
+  const result = await workout.save();
+  res.json(result);
+});
+
 const mongoParams = {
   useNewUrlParser: true,
   useUnifiedTopology: true,

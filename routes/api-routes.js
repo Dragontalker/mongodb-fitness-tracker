@@ -25,6 +25,7 @@ router.post('/', async (req, res) => {
 
 router.get('/range', async (req, res) => {
     await db.Workout.deleteMany({'totalDuration': 0});
+    await db.Workout.deleteMany({'exercises': {$elemMatch: {'duration': 0}}});
     const result = await db.Workout.find({}).sort({day: -1}).limit(7);
     const reverse = result.reverse();
     res.json(reverse);

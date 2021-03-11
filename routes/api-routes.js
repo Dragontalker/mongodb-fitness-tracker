@@ -6,7 +6,18 @@ const router = express.Router();
 // load the data model schema
 const db = require('../models');
 
+// connect to MongoDB
+// const mongoose = require('mongoose');
 
+// mongoose.connect(
+//     process.env.MONGODB_URI || 'mongodb://localhost/workout',
+//     {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//       useCreateIndex: true,
+//       useFindAndModify: false
+//     }
+// );
 
 
 // router.get('/', async (req, res) => {

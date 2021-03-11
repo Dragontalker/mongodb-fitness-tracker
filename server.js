@@ -22,6 +22,8 @@ mongoose.connect(
     }
 );
 
+const db = require('./models');
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.use('/', require('./routes/html-routes'));
-app.use('/api/workouts', require('./routes/api-routes'));
+// app.use('/api/workouts', require('./routes/api-routes'));
 
 // connect to MongoDB
 const mongoose = require('mongoose');

@@ -19,8 +19,16 @@ const WorkoutSchema = new Schema({
 
   exercises: [
     {
-      type: String,
-      name: String,
+      type: {
+        type: String,
+        enum: ['resistance', 'cardio']
+      },
+
+      name: {
+        type: String,
+        trim: true
+      },
+
       duration: Number,
       weight: Number,
       reps: Number,
@@ -45,8 +53,9 @@ app.get('/stats', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/stats.html'));
 });
 
-app.get('/api/workouts', (req, res) => {
-  res.json({msg: 'Hello world!'});
+app.get('/api/workouts', async (req, res) => {
+  const result = await Workout.find({});
+  res.json(result);
 });
 
 const mongoParams = {

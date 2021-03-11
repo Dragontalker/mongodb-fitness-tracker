@@ -1,4 +1,8 @@
-# Unit 17 NoSQL Homework: Workout Tracker
+# Fitness Tracker
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Deployed at Heroku
+https://dragontalker-fitness-tracker.herokuapp.com/
 
 For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
 

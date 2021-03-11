@@ -25,6 +25,9 @@ function populateChart(data) {
   let durations = data.map(({ totalDuration }) => totalDuration);
   let pounds = calculateTotalWeight(data);
   let [ workouts, duration ] = getPieData(data);
+  let [ resistance, pound ] = getDonutData(data);
+  console.log(resistance);
+  console.log(pound);
   const colors = generatePalette();
 
   let line = document.querySelector('#canvas').getContext('2d');
@@ -155,12 +158,12 @@ function populateChart(data) {
   let donutChart = new Chart(pie2, {
     type: 'doughnut',
     data: {
-      labels: workouts,
+      labels: resistance,
       datasets: [
         {
           label: 'Exercises Performed',
           backgroundColor: colors,
-          data: pounds,
+          data: pound,
         },
       ],
     },
@@ -209,6 +212,29 @@ function getPieData(data) {
   });
 
   return [workouts, duration];
+}
+
+function getDonutData(data) {
+  console.log(data);
+  let resistance = [];
+  let pound = [];
+
+  data.forEach((workout) => {
+    workout.exercises.forEach((exercise) => {
+      if (exercise.type === 'resistance') {
+        let target = exercise.name;
+        if (resistance.includes(target)) {
+          let index = resistance.indexOf(target);
+          pound[index] += exercise.weight;
+        } else {
+          resistance.push(target);
+          pound.push(exercise.weight);
+        };
+      }
+    })
+  });  
+
+  return [resistance, pound];
 }
 
 // get all workout data from back-end

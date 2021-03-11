@@ -64,7 +64,12 @@ app.get('/api/workouts/range', async (req, res) => {
   const result = await Workout.find({}).sort({day: -1}).limit(7);
   const reverse = result.reverse();
   res.json(reverse);
-})
+});
+
+app.post('/api/workouts', async (req, res) => {
+  const result = await Workout.create({});
+  res.json(result);
+});
 
 const mongoParams = {
   useNewUrlParser: true,

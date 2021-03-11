@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
 
+const Workout = require('./models/workout');
+
 const app = express();
 
 app.use(logger('dev'));

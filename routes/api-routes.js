@@ -2,10 +2,10 @@
 const express = require('express');
 const router = express.Router();
 
-const db = require('../models');
+const Workout = require('../models/workout');
 
 router.get('/', async (req, res) => {
-    const result = await db.Workout.find({})
+    const result = await Workout.find({})
     res.json(result);
 });
 

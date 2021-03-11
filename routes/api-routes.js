@@ -29,13 +29,21 @@ router.get('/range', async (req, res) => {
     res.json(reverse);
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
     const id = req.params.id;
     const data = req.body;
     const duration = data.duration;
     console.log(id);
     console.log(data);
     console.log(duration);
+    await db.Workout.findOneAndUpdate(
+        { _id: id },
+        { 
+            $push: { exercises: data },
+            $inc: { totalDuration: duration}
+        }, 
+        {new: true}
+    );
 });
 
 module.exports = router;

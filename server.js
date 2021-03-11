@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
 
-const Workout = require('./models/workout');
-
 const app = express();
+const db = require('./models');
 
 app.use(logger('dev'));
 
@@ -20,6 +19,8 @@ app.get('/exercise', (req, res) => {
 app.get('/stats', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/stats.html'));
 });
+
+
 
 app.get('/api/workouts', (req, res) => {
   res.json({msg: 'Hello world!'});

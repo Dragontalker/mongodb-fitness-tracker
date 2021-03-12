@@ -6,6 +6,20 @@ const path = require('path');
 const app = express();
 const Schema = mongoose.Schema;
 
+// I was spliting my files into diffrent directory, everything worked fine locally. However, 
+// when I deployed to Heroku, my server app always crash. Took my several hours to debug, I 
+// found out that I have to put the schema files and server connections in the same Javascript
+// file, otherwise it does not work not Heroku. The reason still remains unknown for now, but 
+// the best solution I can provide is to put schema and routes into this server main file. 
+
+// Originally, 
+// schema should be stored in ./models/workout.js
+// api handlers should be stored in ./routes/api-routes.js
+// html handlers should be stored in ./routes/html-routes.js
+
+// I will convert the directory structure into best practice once I figure out the reason behind the crashes on Heroku.
+
+// MongoDB schema starts here =============================
 const WorkoutSchema = new Schema({
   day: {
     type: Date,
@@ -39,7 +53,9 @@ const WorkoutSchema = new Schema({
 });
 
 const Workout = mongoose.model('workout', WorkoutSchema);
+// MongoDB schema ends here =============================
 
+// Express middlewares starts here ======================
 app.use(logger('dev'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -87,7 +103,9 @@ app.put('/api/workouts/:id', async (req, res) => {
   const result = await workout.save();
   res.json(result);
 });
+// Express middlewares ends here ======================
 
+// Server set up starts here ==========================
 const mongoParams = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -103,3 +121,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', mongo
       console.log(`==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT} in your browser.`);
     });
   });
+// Server set up endss here ===========================

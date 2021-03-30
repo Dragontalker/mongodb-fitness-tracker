@@ -61,9 +61,17 @@ To add a new resistance exercise, user need to enter the name of the exercise, w
 
 ## :sweat_drops: **Feature: Summary of Current Workout Plan**
 
-The summary is automatically generated upon launching or returning to homepage.
+The summary is automatically generated upon launching or returning to homepage (by clicking on `Fitness Tracker` on the top left corner).
 
 ![cardio screenshot](./Assets/homepage.png)
+
+[Back to the Top](#fitness-tracker)
+
+## :bar_chart: **Feature: Dashboard of Last 7 Workout Plans**
+
+By clicking on `Dashboard` on the top left corner, user will be taken to a dashboard for different statistics for last 7 workout plans.
+
+![cardio screenshot](./Assets/dashborad.png)
 
 [Back to the Top](#fitness-tracker)
 

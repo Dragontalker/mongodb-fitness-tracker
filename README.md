@@ -43,7 +43,7 @@ This project builds a workout tracker with Express.js and MongoDB. User can star
 
 :crystal_ball: This application helps user track different exercises under the same workout plan. Exercises are categoried into two major groups: cardio and resistance. There are four main features: adding cardio, adding resistance, viewing summary of current workoutplan, exploring data dashboard for past 7 workout plans.
 
-## **Feature: Adding a New Cardio Exercise**
+## :swimmer: **Feature: Adding a New Cardio Exercise**
 
 To add a new cardio exercise, user need to enter the name of the exercise, distance in miles and its duration.
 

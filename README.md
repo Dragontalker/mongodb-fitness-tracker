@@ -71,7 +71,7 @@ The summary is automatically generated upon launching or returning to homepage (
 
 By clicking on `Dashboard` on the top left corner, user will be taken to a dashboard for different statistics for last 7 workout plans.
 
-![cardio screenshot](./Assets/dashborad.png)
+![cardio screenshot](./Assets/dashboard.png)
 
 [Back to the Top](#fitness-tracker)
 

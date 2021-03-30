@@ -59,6 +59,14 @@ To add a new resistance exercise, user need to enter the name of the exercise, w
 
 [Back to the Top](#fitness-tracker)
 
+## :sweat_drops: **Feature: Summary of Current Workout Plan**
+
+The summary is automatically generated upon launching or returning to homepage.
+
+![cardio screenshot](./Assets/homepage.png)
+
+[Back to the Top](#fitness-tracker)
+
 ### **Installation**
 
 To use this application locally, you need MongoDB community server installed. Type this command in command-line to check:

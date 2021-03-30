@@ -51,6 +51,14 @@ To add a new cardio exercise, user need to enter the name of the exercise, dista
 
 [Back to the Top](#fitness-tracker)
 
+## :muscle: **Feature: Adding a New Resistance Exercise**
+
+To add a new resistance exercise, user need to enter the name of the exercise, weights, setss, reps, and its duration.
+
+![cardio screenshot](./Assets/resistance.png)
+
+[Back to the Top](#fitness-tracker)
+
 ### **Installation**
 
 To use this application locally, you need MongoDB community server installed. Type this command in command-line to check:

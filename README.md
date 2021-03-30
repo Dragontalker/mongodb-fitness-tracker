@@ -16,10 +16,6 @@ https://dragontalker-fitness-tracker.herokuapp.com/
 - [License](#license)
 - [Author Info](#author-info)
 
-## **Screenshot**
-
-![workout tracker screenshot](./Assets/screenshots.png)
-
 # Desription
 
 This project builds a workout tracker with Express.js and MongoDB. User can start a workout plan and each plan can track multiple exercises. This application tracks two type of exercises: resistance and cardio. For resistance, the application tracks weight, reps, sets. For cardio exercises, it tracks ditances. After all, the duration of every exercises will be tracked as well. User can see the summary for their current workout plan at the main mage. If user wants more detailed data, he/she can view dashboard for detailed graphs and distributions of exercises performed over the last 7 workout plans.
@@ -43,9 +39,15 @@ This project builds a workout tracker with Express.js and MongoDB. User can star
 
 [Back to the Top](#fitness-tracker)
 
-## **Screenshot**
+# How to Use
 
-![workout tracker screenshot](./Assets/screenshots.png)
+:crystal_ball: This application helps user track different exercises under the same workout plan. Exercises are categoried into two major groups: cardio and resistance. There are four main features: adding cardio, adding resistance, viewing summary of current workoutplan, exploring data dashboard for past 7 workout plans.
+
+## **Feature: Adding a New Cardio Exercise**
+
+To add a new cardio exercise, user need to enter the name of the exercise, distance in miles and its duration.
+
+![cardio screenshot](./Assets/cardio.png)
 
 [Back to the Top](#fitness-tracker)
 

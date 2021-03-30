@@ -75,9 +75,9 @@ By clicking on `Dashboard` on the top left corner, user will be taken to a dashb
 
 [Back to the Top](#fitness-tracker)
 
-### **Installation**
+# How to Install
 
-To use this application locally, you need MongoDB community server installed. Type this command in command-line to check:
+:cd: To use this application locally, you need MongoDB community server installed. Type this command in command-line to check:
 
 ```bash
 mongo --version
@@ -95,17 +95,15 @@ The last step would be seeding, use this command:
 npm run seed
 ```
 
----
+[Back to the Top](#fitness-tracker)
 
-### **Usage**
-
-To initialize the server, type this command in console, then use the application through brower.
+:computer: To initialize the server, type this command in console, then use the application through brower.
 
 ```bash
 npm start
 ```
 
----
+[Back to the Top](#fitness-tracker)
 
 ### **Contact**
 

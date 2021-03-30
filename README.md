@@ -26,6 +26,23 @@ This project builds a workout tracker with Express.js and MongoDB. User can star
 
 [Back to the Top](#fitness-tracker)
 
+## :wrench: **Technologies Used**
+
+- MongoDB
+- Mongoose
+- Express.js
+- Node.js
+- RESTful Api
+- Chart.js
+- Bootstrap 5
+- HTML 5
+- CSS 3
+- JavaScript
+- VS Code
+- Heroku
+
+[Back to the Top](#fitness-tracker)
+
 ## **Screenshot**
 
 ![workout tracker screenshot](./Assets/screenshots.png)

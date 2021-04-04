@@ -121,6 +121,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 # Author Info
 
-:space_invader: Tong (Richard) Yang is a full stack software engineering from Canada, living Toronto Area. If you have any questions, email him at richard.yang.tong@gmail.com or visit his [GitHub](https://github.com/Dragontalker).
+:space_invader: Tong (Richard) Yang is a full stack software engineer from Canada, living Toronto Area. If you have any questions, email him at richard.yang.tong@gmail.com or visit his [GitHub](https://github.com/Dragontalker).
 
 [Back to the Top](#fitness-tracker)
